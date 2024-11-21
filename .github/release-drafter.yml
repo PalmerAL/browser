@@ -1,0 +1,34 @@
+# This file is used by Release Drafter
+# GitHub Action https://github.com/marketplace/actions/release-drafter
+# Each merged PR is added in the right section of the draft release based on its label.
+categories:
+  - title: "💥 Breaking Changes"
+    label: "breaking"
+  - title: "✨ Features"
+    label: "enhancement"
+  - title: "🐛 Fixes"
+    label: "bug"
+  - title: "🏎 Performance"
+    label: "performance"
+  - title: "🔨 Refactoring"
+    label: "refactoring"
+  - title: "❌ Removals and Deprecations"
+    label: "removal"
+  - title: "🚥 Testing"
+    label: "testing"
+  - title: "💄 Style"
+    label: "style"
+  - title: "📖 Documentation"
+    label: "documentation"
+  - title: "👷‍♂️ Continuous Integration"
+    label: "ci"
+  - title: "📦 Build and dependencies"
+    labels:
+      - "build"
+      - "dependencies"
+exclude-labels:
+  - "skip changelog"
+template: |
+  ## Changes
+
+  $CHANGES
