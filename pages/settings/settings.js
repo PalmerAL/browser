@@ -182,6 +182,24 @@ for (var contentType in contentTypes) {
   })(contentType)
 }
 
+/* Privacy and history */
+
+var clearHistoryButton = document.getElementById("clear-history-now")
+clearHistoryButton.addEventListener("click", () => {
+  const confirmedDeletion = confirm(l('settingsDeleteHistory'))
+  if (confirmedDeletion) {
+    try {
+      // Nuke history here with places.deleteAllHistory() ??
+      // postMessage({ message: { action: 'deleteAllHistory' } })
+      window.alert("Your browsing history has been erased.")
+    } catch (e) {
+      window.alert("There was an error clearing your history.")
+    }
+  } else {
+    return
+  }
+})
+
 /* dark mode setting */
 var darkModeNever = document.getElementById('dark-mode-never')
 var darkModeNight = document.getElementById('dark-mode-night')
