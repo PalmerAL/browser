@@ -267,7 +267,7 @@ function startReaderView (article, date) {
     requestAnimationFrame(function () {
       setReaderFrameSize()
       requestAnimationFrame(function () {
-        rframe.focus() // allows spacebar page down and arrow keys to work correctly
+        //rframe.focus() // allows spacebar page down and arrow keys to work correctly
       })
     })
 
