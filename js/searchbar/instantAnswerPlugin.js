@@ -61,9 +61,9 @@ var instantAnswers = {
 
 function showSearchbarInstantAnswers (text, input, inputFlags) {
   // only make requests to the DDG api if DDG is set as the search engine
-  if (searchEngine.getCurrent().name !== 'DuckDuckGo') {
-    return
-  }
+  // if (searchEngine.getCurrent().name !== 'DuckDuckGo') {
+  //   return
+  // }
 
   // don't make a request if the searchbar has already closed
 
