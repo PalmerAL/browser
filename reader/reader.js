@@ -273,7 +273,31 @@ function startReaderView (article, date) {
 
     window.addEventListener('resize', setReaderFrameSize)
   }
-  document.body.appendChild(rframe)
+
+  const overlayForZooming = document.createElement('div')
+  overlayForZooming.id = 'overlay'
+
+  rframe.addEventListener('load', function () {
+    rframe.contentWindow.document.addEventListener('keydown', function (e) {
+      if (e.getModifierState('Control')) {
+        overlayForZooming.style.pointerEvents = 'auto'
+      }
+    })
+
+    rframe.contentWindow.document.addEventListener('keyup', function (e) {
+      if (e.key === 'Control') {
+        overlayForZooming.style.pointerEvents = 'none'
+      }
+    })
+  })
+
+  const container = document.createElement('div')
+  container.id = 'container'
+
+  container.appendChild(overlayForZooming)
+  container.appendChild(rframe)
+
+  document.body.appendChild(container)
 }
 
 function processArticle (data) {
