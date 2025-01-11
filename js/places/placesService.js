@@ -137,6 +137,8 @@ function handleRequest (data, cb) {
   }
 
   if (action === 'updatePlace') {
+    console.time()
+    llmAdapter.summarizePage(pageData.extractedText).then(res => {console.timeEnd(); console.log("got summary", res)})
     db.transaction('rw', db.places, function () {
       db.places.where('url').equals(pageData.url).first(function (item) {
         var isNewItem = false
@@ -292,3 +294,54 @@ ipcRenderer.on('places-connect', function (e) {
   })
   e.ports[0].start()
 })
+
+// Initialize LLM service
+
+const llmAdapter = {
+  messagePort: null,
+  pendingPromises: {},
+  invokeWithPromise: function (data) {
+    const callbackId = Math.random()
+    const { promise, resolve, reject } = Promise.withResolvers()
+    llmAdapter.pendingPromises[callbackId] = { promise, resolve, reject }
+    llmAdapter.messagePort.postMessage({
+      ...data,
+      callbackId
+    })
+    return promise
+  },
+  replyToPromise: function (callbackId, result) {
+    if (llmAdapter.pendingPromises[callbackId]) {
+      llmAdapter.pendingPromises[callbackId].resolve(result)
+      delete llmAdapter.pendingPromises[callbackId]
+    } else {
+      throw new Error('missing callbackId')
+    }
+  },
+  summarizePage: function (text) {
+    const textToSummarize = text.substring(0, 20000)
+    console.log("getting summary", textToSummarize)
+    return llmAdapter.invokeWithPromise({
+      action: 'run',
+      // TODO there's some character encoding problem when passing text to the subprocess; encodeURIComponent seems to help
+      input: encodeURIComponent(`Write one short sentence summarizing the key point of the text. Be concise. Do not mention the author. Use the following template for your response: [The key point is that]: [your answer]. \n` + textToSummarize)
+    })
+  },
+  onMessage: function (e) {
+    if (e.data.callbackId) {
+      llmAdapter.replyToPromise(e.data.callbackId, e.data.result)
+    }
+  },
+  initialize: () => {
+    const { port1, port2 } = new MessageChannel()
+
+    ipcRenderer.postMessage('llm-service-connect', null, [port1])
+
+    llmAdapter.messagePort = port2
+    port2.addEventListener('message', llmAdapter.onMessage)
+
+    port2.start()
+  }
+}
+
+llmAdapter.initialize()

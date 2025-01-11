@@ -16,7 +16,9 @@ const {
   nativeTheme,
   shell,
   net,
-  WebContentsView
+  WebContentsView,
+  utilityProcess,
+  MessageChannelMain
 } = electron
 
 crashReporter.start({
@@ -495,3 +497,12 @@ ipc.on('places-connect', function (e) {
 function getWindowWebContents (win) {
   return win.getContentView().children[0].webContents
 }
+
+app.on('ready', () => {
+  // Main process
+  const llmServiceProcess = utilityProcess.fork(path.join(__dirname, "main/llmService.mjs"))
+
+  ipc.on('llm-service-connect', function(e) {
+    llmServiceProcess.postMessage({message: 'init'}, e.ports)
+  })
+})
