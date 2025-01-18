@@ -28,6 +28,9 @@
     "goForward": "Naprijed",
     "inspectElement": "Pregledajte element",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": "Zalijepi i kreni", //context menu item
     "DDGAnswerSubtitle": "Odgovor", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "Predložena web lokacija", //this is used to label suggested websites from the DuckDuckGo API,

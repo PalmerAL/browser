@@ -28,6 +28,9 @@
     "goForward": "Gå framåt",
     "inspectElement": "Inspektera del",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": "Klistra in och kör", //context menu item
     "DDGAnswerSubtitle": "Svar", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "Föreslagna sidor", //this is used to label suggested websites from the DuckDuckGo API,

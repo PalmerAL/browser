@@ -28,6 +28,9 @@
     "goForward": "Go Forward",
     "inspectElement": "Inspect Element",
     /* searchbar */
+    "placesPluginOpenAgain": "Open Again",
+    "placesPluginSwitchToTab": "Switch to Tab", // missing translation
+    "placesPluginSwitchToTask": "Switch to \"%t\"", // %t is replaced with the name of a task
     "pasteAndGo": "Paste and Go", //context menu item
     "DDGAnswerSubtitle": "Answer", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "Suggested site", //this is used to label suggested websites from the DuckDuckGo API,

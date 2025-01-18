@@ -220,6 +220,44 @@ function createItem (data) {
     item.classList.add('has-action-button')
   }
 
+  if (data.textActionButtons) {
+    var buttonArea = document.createElement('div')
+    buttonArea.className = 'text-action-button-row'
+
+    data.textActionButtons.forEach(function (buttonEntry) {
+      var button = document.createElement('button')
+      button.className = 'action-button-horizontal'
+      if (buttonEntry.default) {
+        button.classList.add('ignores-keyboard-focus')
+        button.classList.add('default-action')
+      }
+      button.tabIndex = -1
+      if (buttonEntry.icon) {
+        var el = document.createElement('i')
+        el.className = 'i ' + buttonEntry.icon
+        button.appendChild(el)
+      }
+
+      button.appendChild(document.createTextNode(buttonEntry.text))
+
+      if (buttonEntry.fn) {
+        button.addEventListener('click', function (e) {
+          e.stopPropagation()
+          buttonEntry.fn.call(this, e)
+        })
+        button.addEventListener('keydown', function (e) {
+          if (e.keyCode === 13) {
+            button.click()
+            e.stopPropagation()
+          }
+        })
+      }
+      buttonArea.appendChild(button)
+    })
+
+    item.appendChild(buttonArea)
+  }
+
   if (data.click) {
     item.addEventListener('click', data.click)
   }
@@ -228,6 +266,7 @@ function createItem (data) {
     // return should act like click
     if (e.keyCode === 13) {
       item.click()
+      e.stopPropagation()
     }
   })
 

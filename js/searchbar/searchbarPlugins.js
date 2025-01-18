@@ -1,5 +1,6 @@
 var searchbar = document.getElementById('searchbar')
 var searchbarUtils = require('searchbar/searchbarUtils.js')
+var urlParser = require('util/urlParser.js')
 
 var plugins = [] // format is {name, container, trigger, showResults}
 var results = {} // format is {pluginName: [results]}
@@ -22,6 +23,7 @@ const searchbarPlugins = {
     }
     for (var i = 0; i < plugins.length; i++) {
       empty(plugins[i].container)
+      results[plugins[i].name] = []
     }
   },
 
@@ -69,6 +71,10 @@ const searchbarPlugins = {
       item: item
     }
 
+    if (data.url) {
+      data.urlKey = urlParser.removeTextFragment(data.url)
+    }
+
     results[pluginName].push(data)
   },
 
@@ -76,29 +82,38 @@ const searchbarPlugins = {
     if (options.allowDuplicates) {
       data.allowDuplicates = true
     }
-    if (data.url && !data.allowDuplicates) {
+
+    if (data.url) {
+      data.urlKey = urlParser.removeTextFragment(data.url)
+    }
+
+    if (data.urlKey && !data.allowDuplicates) {
       // skip duplicates
       for (var plugin in results) {
         for (var i = 0; i < results[plugin].length; i++) {
-          if (results[plugin][i].url === data.url && !results[plugin][i].allowDuplicates) {
+          if (results[plugin][i].urlKey === data.urlKey && !results[plugin][i].allowDuplicates) {
             return
           }
         }
       }
     }
+
+    if (data.url && !data.click) {
+      data.click = function (e) {
+        URLOpener(data.url, e)
+      }
+    }
+
     var item = searchbarUtils.createItem(data)
 
     if (data.url) {
       item.setAttribute('data-url', data.url)
-      item.addEventListener('click', function (e) {
-        URLOpener(data.url, e)
-      })
 
-      item.addEventListener('keyup', function(e) {
+      item.addEventListener('keyup', function (e) {
         /*  right arrow or space should autocomplete with selected item if it's
             a search suggestion */
         if (e.keyCode === 39 || e.keyCode === 32) {
-          let input = document.getElementById('tab-editor-input')
+          const input = document.getElementById('tab-editor-input')
           input.value = data.url
           input.focus()
         }

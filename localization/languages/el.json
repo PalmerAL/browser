@@ -28,7 +28,10 @@
       "goForward": "Πάνε εμπρός",
       "inspectElement": "Επιθεώρηση στοιχείου",
       /* searchbar */
-      "pasteAndGo": "Επικόλληση και μετάβαση", //context menu item
+      "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
+    "pasteAndGo": "Επικόλληση και μετάβαση", //context menu item
       "DDGAnswerSubtitle": "Απάντηση", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
       "suggestedSite": "Προτεινόμενη ιστοσελίδα", //this is used to label suggested websites from the DuckDuckGo API,
       "resultsFromDDG": "Αναζητήσεις απο την DuckDuckGo", //this is used as a label to indicate which results come from DuckDuckGo's API

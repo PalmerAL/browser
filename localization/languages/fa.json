@@ -29,6 +29,9 @@
     "goForward": "جلو",
     "inspectElement": "وارسی",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": "رفتن به",
     "DDGAnswerSubtitle": "یافته شده از DuckDuckGo",
     "suggestedSite": "سایت پیشنهادی", //this is used to label suggested websites from the DuckDuckGo API,

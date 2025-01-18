@@ -28,7 +28,10 @@
       "goForward": "Наперад",
       "inspectElement": "Праверыць элемент",
       /* searchbar */
-      "pasteAndGo": "Уставіць і перайсці", //context menu item
+      "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
+    "pasteAndGo": "Уставіць і перайсці", //context menu item
       "DDGAnswerSubtitle": "Адказ", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
       "suggestedSite": "Рэкамендуемы сайт", //this is used to label suggested websites from the DuckDuckGo API,
       "resultsFromDDG": "Вынікі з DuckDuckGo", //this is used as a label to indicate which results come from DuckDuckGo's API

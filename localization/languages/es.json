@@ -28,6 +28,9 @@
     "goForward": "Ir adelante",
     "inspectElement": "Inspeccionar elemento",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": null, //using original English name for the feature. "Pegar e ir/buscar" doesn't sound quite right
     "DDGAnswerSubtitle": "Respuesta", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "Sitio sugerido", //this is used to label suggested websites from the DuckDuckGo API,

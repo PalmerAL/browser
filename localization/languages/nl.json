@@ -28,6 +28,9 @@
     "goForward": "Ga verder",
     "inspectElement": "Inspecteer element",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": "Plakken en bezoeken", //context menu item
     "DDGAnswerSubtitle": "Antwoord", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "Voorgestelde site", //this is used to label suggested websites from the DuckDuckGo API,

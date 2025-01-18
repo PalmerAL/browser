@@ -28,6 +28,9 @@
     "goForward": "সামনে আগান",
     "inspectElement": "এলিমেন্ট পরিদর্শন করুন",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": "পেস্ট করুন এবং যান",
     "DDGAnswerSubtitle": "উত্তর", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "প্রস্তাবিত সাইট", //this is used to label suggested websites from the DuckDuckGo API,

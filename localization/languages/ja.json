@@ -28,6 +28,9 @@
     "goForward": "進む",
     "inspectElement": "要素を検証",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": "貼り付けて移動",
     "DDGAnswerSubtitle": "インスタントアンサー", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "おすすめサイト", //this is used to label suggested websites from the DuckDuckGo API,

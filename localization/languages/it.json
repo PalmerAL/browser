@@ -28,6 +28,9 @@
     "goForward": "Avanti",
     "inspectElement": "Ispeziona elemento",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": "Incolla e Vai",
     "DDGAnswerSubtitle": "Risposta", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "Sito suggerito", //this is used to label suggested websites from the DuckDuckGo API,

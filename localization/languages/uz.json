@@ -28,6 +28,9 @@
     "goForward": "",
     "inspectElement": "Elementni kuzatish",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": null, //missing translation
     "DDGAnswerSubtitle": "Javob", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "Taklif qilingan sahifa", //this is used to label suggested websites from the DuckDuckGo API,

@@ -28,6 +28,9 @@
     "goForward": "下一頁",
     "inspectElement": "檢查元素",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": "貼上並前往",
     "DDGAnswerSubtitle": "搜尋結果", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "建議網站", //this is used to label suggested websites from the DuckDuckGo API,

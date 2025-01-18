@@ -173,7 +173,6 @@ require('macHandoff.js').initialize()
 
 require('searchbar/placesPlugin.js').initialize()
 require('searchbar/instantAnswerPlugin.js').initialize()
-require('searchbar/openTabsPlugin.js').initialize()
 require('searchbar/bangsPlugin.js').initialize()
 require('searchbar/customBangs.js').initialize()
 require('searchbar/searchSuggestionsPlugin.js').initialize()

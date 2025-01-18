@@ -28,6 +28,9 @@
     "goForward": "Pirmyn",
     "inspectElement": "Ištirti elementą",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": null, //missing translation
     "DDGAnswerSubtitle": "Atsakymas", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "Siūloma svetainė", //this is used to label suggested websites from the DuckDuckGo API,

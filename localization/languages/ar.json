@@ -28,6 +28,9 @@
     "goForward": "تقدم للامام",
     "inspectElement": "فحص العنصر",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": "ألصق و انتقل",
     "DDGAnswerSubtitle": "جواب", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "الموقع المقترح", //this is used to label suggested websites from the DuckDuckGo API,

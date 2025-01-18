@@ -28,6 +28,9 @@
     "goForward": "Anar endavant",
     "inspectElement": "Inspeccionar l'element",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": "Enganxar i anar", //context menu item
     "DDGAnswerSubtitle": "Resposta", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "Lloc suggerit", //this is used to label suggested websites from the DuckDuckGo API,

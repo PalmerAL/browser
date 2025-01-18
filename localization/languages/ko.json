@@ -28,6 +28,9 @@
     "goForward": "앞으로",
     "inspectElement": "요소 검사",
     /* searchbar */
+    "placesPluginOpenAgain": null, // missing translation
+    "placesPluginSwitchToTab": null, // missing translation
+    "placesPluginSwitchToTask": null, // missing translation
     "pasteAndGo": "붙여넣고 이동",
     "DDGAnswerSubtitle": "응답", //this is a noun - it is used as a subtitle when displaying Instant Answers from DuckDuckGo in the searchbar
     "suggestedSite": "사이트 제안", //this is used to label suggested websites from the DuckDuckGo API,
