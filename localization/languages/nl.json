@@ -295,6 +295,10 @@
     "savedPasswordsEmpty": "Geen opgeslagen wachtwoorden.",
     "savedPasswordsNeverSavedLabel": "Nooit opgeslagen",
     "deletePassword": "Verwijder wachtwoord voor %s?",
+    "exportCredentials": "Exporteer wachtwoorden",
+    "importCredentials": "Importeer wachtwoorden",
+    "exportCredentialsConfirmation": "Uw geëxporteerde wachtwoorden worden opgeslagen in een bestand in leesbare tekst. Als u dit bestand niet meer gebruikt, is het aan te raden om het bestand te verwijderen. Weet u zeker dat u wilt doorgaan?",
+    "importCredentialsConfirmation": "Het importeren van wachtwoorden overschrijft alle bestaande wachtwoorden voor dezelfde sites. Weet u zeker dat u wilt doorgaan?",
     /* Dialogs */
     "loginPromptTitle": "Inloggen bij %h", //%h is replaced with host, %r with realm (title of protected part of site)
     "dialogConfirmButton": "Bevestigen",

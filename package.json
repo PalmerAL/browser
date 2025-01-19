@@ -36,6 +36,7 @@
     "electron-squirrel-startup": "^1.0.0",
     "expr-eval": "^2.0.2",
     "node-abi": "^3.8.0",
+    "papaparse": "^5.5.1",
     "pdfjs-dist": "4.2.67",
     "quick-score": "^0.2.0",
     "regedit": "^3.0.3",

@@ -296,6 +296,10 @@
     "savedPasswordsEmpty": "No saved passwords.",
     "savedPasswordsNeverSavedLabel": "Never saved",
     "deletePassword": "Delete password for %s?",
+    "exportCredentials": "Export credentials",
+    "importCredentials": "Import credentials",
+    "exportCredentialsConfirmation": "Your exported credentials will be saved in a file in plain text. When you're done using this file, you should delete it. Are you sure you want to continue?",
+    "importCredentialsConfirmation": "Importing passwords will overwrite any existing passwords for the same sites. Are you sure you want to continue?",
     /* Dialogs */
     "loginPromptTitle": "Sign in to %h", //%h is replaced with host, %r with realm (title of protected part of site)
     "dialogConfirmButton": "Confirm",
